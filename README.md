@@ -5,3 +5,11 @@
 - Checked heading structure to ensure logical reading order for assistive technologies.
 - Ensured keyboard navigation works smoothly across all pages.
 - Reviewed WAVE results and confirmed zero accessibility errors on all pages.
+
+## Visual Design & Gestalt Principles
+- 
+
+## Accessible Contact Form
+- 
+
+## Live Site
