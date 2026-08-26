@@ -1,3 +1,5 @@
 {
-  "cSpell.words": ["Fortnite"]
+  "cSpell.words": ["Fortnite"],
+  "editor.mouseWheelZoom": true,
+  "editor.formatOnPaste": true
 }

@@ -173,6 +173,7 @@ button {
 
 .card-container>section {
     flex: 1 1 auto;
+    gap: 20px;
     padding: 16px;
     background-color: #f4f4f4;
     border-radius: 8px;
