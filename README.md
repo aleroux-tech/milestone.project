@@ -1,10 +1,12 @@
 ## Accessibility Improvements
 
 - Added descriptive alt text to all images so screen readers can understand visual content.
-- Confirmed all text/background color combinations meet WCAG AA contrast using WebAim Contrast Checker.
-- Checked heading structure to ensure logical reading order for assistive technologies.
-- Ensured keyboard navigation works smoothly across all pages.
-- Reviewed WAVE results and confirmed zero accessibility errors on all pages.
+- Added `lang="en"` to each page so assistive technology can identify the document language.
+- Added labels, a fieldset, and a legend to the contact form so its controls have clear accessible names and grouping.
+- Added required-field instructions, an ARIA live error region, and invalid-field styling to make form errors visible and announced.
+- Added visible keyboard focus styles to links, form controls, and the submit button.
+- The selected text and background combinations pass WCAG AA, including `#23374d` on `#f7f3ea` at 10.99:1, `#2f6f4f` on `#dfe9f5` at 4.88:1, and `#9c2f50` on `#f7f3ea` at more than 4.5:1.
+- WAVE should be run on `index.html`, `projects.html`, and `about.html` before submission to confirm zero errors in the deployed site.
 
 ## Visual Design & Gestalt Principles
 
@@ -17,9 +19,8 @@
 
 - Added a contact form with four required fields: Name, Email, Subject, and Message.
 - Included descriptive `<label>` elements for every input so screen readers can identify each field.
-- Added an aria-live="polite" region for accessible error messages without using alert boxes.
-- Ensured the form is keyboard‑navigable and follows a logical reading order.
-
+- Added a role="alert" and aria-live="polite" region for accessible error messages without using alert boxes.
+- Ensured the form is keyboard-navigable and follows a logical reading order.
 
 ## Live Site
 

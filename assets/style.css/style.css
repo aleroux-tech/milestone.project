@@ -1,15 +1,20 @@
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
+    padding: 0;
     background-color: #f7f3ea;
-    font-family: Arial, sans-serif;
     color: #23374d;
+    font-family: Arial, sans-serif;
 }
 
 header {
     background-color: #dfe9f5;
     padding: 24px;
     margin: 0 0 20px;
-    border-bottom: 4px solid #b84d6b;
+    border-bottom: 4px solid #9c2f50;
 }
 
 h1 {
@@ -30,20 +35,20 @@ h1 {
     background-color: #ffffff;
 }
 
-#site-nav {
+nav {
     background-color: #23374d;
     padding: 12px 16px;
     margin: 0 20px 20px;
-    border: 2px solid #b84d6b;
+    border: 2px solid #9c2f50;
 }
 
-#site-nav a {
+nav a {
     color: #ffffff;
     text-decoration: none;
     margin-right: 10px;
 }
 
-#main-content {
+main {
     padding: 20px;
     margin: 0 20px 20px;
     border: 2px solid #2f6f4f;
@@ -53,7 +58,7 @@ h1 {
 section {
     margin: 16px 0;
     padding: 16px;
-    border: 2px solid #b84d6b;
+    border: 2px solid #9c2f50;
 }
 
 p {
@@ -67,7 +72,7 @@ p {
 
 .note {
     font-weight: bold;
-    color: #b84d6b;
+    color: #9c2f50;
 }
 
 #assignment-details {
@@ -98,26 +103,67 @@ p {
     background-color: #eaf7ef;
 }
 
-#page-footer {
+footer {
     background-color: #23374d;
     color: #ffffff;
     padding: 16px;
     margin: 0 20px 20px;
-    border: 2px solid #b84d6b;
+    border: 2px solid #9c2f50;
     text-align: center;
 }
 
-/* base styles - Mobile First (320px standard layout) */
-*{
-    box-sizing: border-box;
+nav a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #9c2f50;
+    outline-offset: 2px;
 }
 
-body {
-    margin: 0;
-    padding: 0;
-    font-family: sans-serif;
+form fieldset {
+    display: grid;
+    gap: 8px;
+    padding: 16px;
+    border: 2px solid #2f6f4f;
 }
-/* Stack sections vertically on small screen to prevent scrolling */
+
+form input,
+form textarea {
+    width: 100%;
+    padding: 8px;
+    border: 2px solid #23374d;
+    font: inherit;
+}
+
+form textarea {
+    min-height: 120px;
+    resize: vertical;
+}
+
+#form-instructions,
+#form-error {
+    margin: 0;
+}
+
+#form-error {
+    color: #9c2f50;
+    font-weight: bold;
+}
+
+form input:user-invalid,
+form textarea:user-invalid {
+    border-color: #9c2f50;
+}
+
+button {
+    width: fit-content;
+    padding: 8px 16px;
+    background-color: #23374d;
+    color: #ffffff;
+    border: 2px solid #23374d;
+    cursor: pointer;
+}
+
 .card-container {
     display: flex;
     flex-direction: column;
@@ -125,27 +171,26 @@ body {
     padding: 16px;
 }
 
-.card-container > section {
-    background-color: #f4f4f4;
-    padding: 16px;
-    border-radius: 8px;
+.card-container>section {
     flex: 1 1 auto;
+    padding: 16px;
+    background-color: #f4f4f4;
+    border-radius: 8px;
 }
 
-/* Tablet & Desktop Layout Change using Media Query */
 @media (min-width: 768px) {
-  .card-container {
-    flex-direction: row;
-    flex-wrap: wrap;
-  }
+    .card-container {
+        flex-direction: row;
+        flex-wrap: wrap;
+    }
 
-  .card-container > section {
-      flex: 1 1 calc(50% - 20px); /* Displays sections in columns side-by-side */
-  }
+    .card-container>section {
+        flex: 1 1 calc(50% - 20px);
+    }
 }
 
 @media (min-width: 1200px) {
-    .card-container > section {
-        flex: 1 1 calc(25% - 20px); /* Adjusts across 1200 px wide viewports */
+    .card-container>section {
+        flex: 1 1 calc(25% - 20px);
     }
 }
