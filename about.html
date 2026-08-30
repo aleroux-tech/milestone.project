@@ -9,8 +9,7 @@
     <header>
       <h1>About Me and Contacts</h1>
 
-      <img
-        src="assets/images/chatgptfortnitefam.png"
+      <img       src="assets/images/chatgptfortnitefam.png"
         alt="A family gaming scene"
         class="hero-image"
         loading="eager"
@@ -23,8 +22,12 @@
       <a href="projects.html">Projects/Work</a>
       <a href="about.html">About/Contact</a>
     </nav>
+
     <main>
-          <form id="contact-form">
+
+      <button id="toggleForm">Show/Hide Contact Form</button>
+      
+      <form id="contact-form">
             <fieldset>
               <legend>Send a message</legend>
               <p id="form-instructions">All fields are required.</p>
@@ -45,31 +48,11 @@
 
               <button type="submit">Send</button>
             </fieldset>
-      </section>
-
-      <section>
-        <h2>Contact Me</h2>
-        <form id="contact-form">
-          <label for="name">Name</label>
-          <input type="text" id="name" name="name" required />
-
-          <label for="email">Email</label>
-          <input type="email" id="email" name="email" required />
-
-          <label for="subject">Subject</label>
-          <input type="text" id="subject" name="subject" required />
-
-          <label for="message">Message</label>
-          <textarea id="message" name="message" required></textarea>
-
-          <div id="error-message" aria-live="polite"></div>
-
-          <button type="submit">Send</button>
-        </form>
-      </section>
+      </form>
     </main>
     <footer>
       <p>&copy; 2026 Families That Game Together</p>
-    </footer>
+      </footer>
+      <script src="assets/script.js"></script>
   </body>
 </html>
