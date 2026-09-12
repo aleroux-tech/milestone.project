@@ -1,29 +1,72 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Interactive DOM Homework</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive Gaming Network</title>
 
     <!-- Correct CSS path -->
-    <link rel="stylesheet" href="assets/style.css/style.css">
+    <link rel="stylesheet" href="assets/style.css/style.css" />
   </head>
 
   <body>
-    <h1>Interactive DOM Homework</h1>
+    <header>
+      <h1>Interactive Gaming Network</h1>
+      <img
+        src="assets/images/gamingpc.png"
+        alt="A family gaming scene"
+        class="hero-image"
+        loading="eager"
+        decoding="async"
+      />
+      <p class="intro">
+        Explore fun gaming interactions - customize your gamer tag, learn gaming
+        facts, and share your favorite games!
+      </p>
+    </header>
 
-    <h2>1. Button Changes Content</h2>
-    <button id="factButton">Show Beach Fact</button>
-    <p id="beachFact">Click the button to see a fact!</p>
+    <nav id="site-nav">
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects/Work</a> |
+      <a href="about.html">About/Contact</a>
+      <a href="interactive.html">Interactive Gaming Network</a>
+    </nav>
 
-    <h2>2. Style Changes on Input</h2>
-    <input id="colorInput" type="text" placeholder="Type a color">
-    <p id="colorPreview">This text changes color as you type.</p>
+    <main>
+      <!-- Gaming Fact Section -->
+      <section>
+        <h2>Gaming Fact Generator</h2>
+        <button id="factButton">Show Gaming Fact</button>
+        <p id="beachFact">Click the button to see a gaming fact!</p>
+      </section>
 
-    <h2>3. Dynamic List</h2>
-    <input id="listInput" type="text" placeholder="Add a beach item">
-    <button id="addItem">Add Item</button>
-    <ul id="itemList"></ul>
+      <!-- Gamer Tag Color Customizer -->
+      <section>
+        <h2>Gamer Tag Customization Station</h2>
+        <input
+          id="colorInput"
+          type="text"
+          placeholder="Type a color (e.g., red, blue, green)"
+        />
+        <p id="colorPreview">Gamer Tag Preview</p>
+      </section>
+
+      <!-- Favorite Games List -->
+      <section>
+        <h2>Favorite Games</h2>
+        <input
+          id="listInput"
+          type="text"
+          placeholder="Write your favorite game"
+        />
+        <button id="addItem">Add Game</button>
+        <ul id="itemList"></ul>
+      </section>
+    </main>
+
+    <footer>
+      <p>&copy; 2026 Families That Game Together</p>
+    </footer>
 
     <!-- Correct JS path -->
     <script src="assets/script.js"></script>

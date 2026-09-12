@@ -67,7 +67,7 @@ const beachFact = document.querySelector("#beachFact");
 if (factButton && beachFact) {
   factButton.addEventListener("click", () => {
     beachFact.textContent =
-      "Fun fact: Beaches can be made of coral, lava, shells, or even glass!";
+      "Gaming fact: Over 3 billion people worldwide play video games — that's almost half the planet!";
   });
 }
 
