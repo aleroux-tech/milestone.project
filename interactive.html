@@ -5,22 +5,23 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Interactive Gaming Network</title>
 
-    <!-- Correct CSS path -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
     <header>
       <h1>Interactive Gaming Network</h1>
+
       <img
         src="assets/images/gamingpc.png"
-        alt="A family gaming scene"
+        alt="Gaming computer setup with neon lighting"
         class="hero-image"
         loading="eager"
         decoding="async"
       />
+
       <p class="intro">
-        Explore fun gaming interactions - customize your gamer tag, learn gaming
+        Explore fun gaming interactions — customize your gamer tag, learn gaming
         facts, and share your favorite games!
       </p>
     </header>
@@ -28,56 +29,54 @@
     <nav id="site-nav">
       <a href="index.html">Home</a> |
       <a href="projects.html">Projects/Work</a> |
-      <a href="about.html">About/Contact</a>
-
-      <a href="interactive.html">
-        Visit Interactive Page
-        <img src="arrow-icon.png" alt="" />
-      </a>
+      <a href="about.html">About/Contact</a> |
+      <a href="interactive.html">Interactive Gaming Network</a>
     </nav>
 
     <main>
-      <!-- Gaming Fact Section -->
-      <section>
-        <h2>Gaming Fact Generator</h2>
-        <button id="factButton">Show Gaming Fact</button>
-        <p id="beachFact">Click the button to see a gaming fact!</p>
-      </section>
+      <div class="card-container">
+        <!-- Gaming Fact Section -->
+        <section>
+          <h2>Gaming Fact Generator</h2>
+          <button id="factButton">Show Gaming Fact</button>
+          <p id="beachFact">Click the button to see a gaming fact!</p>
+        </section>
 
-      <!-- Gamer Tag Color Customizer -->
-      <section>
-        <h2>Gamer Tag Customization Station</h2>
+        <!-- Gamer Tag Color Customizer -->
+        <section>
+          <h2>Gamer Tag Customization Station</h2>
 
-        <label for="colorInput">Choose a color for your gamer tag:</label>
-        <input
-          id="colorInput"
-          type="text"
-          placeholder="Type a color (e.g., red, blue, green)"
-        />
+          <label for="colorInput">Choose a color for your gamer tag:</label>
+          <input
+            id="colorInput"
+            type="text"
+            placeholder="Type a color (e.g., red, blue, green)"
+          />
 
-        <p id="colorPreview">Gamer Tag Preview</p>
-      </section>
+          <p id="colorPreview">Gamer Tag Preview</p>
+        </section>
 
-      <!-- Favorite Games List -->
-      <section>
-        <h2>Favorite Games</h2>
+        <!-- Favorite Games List -->
+        <section>
+          <h2>Favorite Games</h2>
 
-        <label for="listInput">Add your favorite game:</label>
-        <input
-          id="listInput"
-          type="text"
-          placeholder="Write your favorite game"
-        />
-        <button id="addItem">Add Game</button>
-        <ul id="itemList"></ul>
-      </section>
+          <label for="listInput">Add your favorite game:</label>
+          <input
+            id="listInput"
+            type="text"
+            placeholder="Write your favorite game"
+          />
+          <button id="addItem">Add Game</button>
+
+          <ul id="itemList"></ul>
+        </section>
+      </div>
     </main>
 
     <footer>
       <p>&copy; 2026 Families That Game Together</p>
     </footer>
 
-    <!-- Correct JS path -->
     <script src="assets/script.js"></script>
   </body>
 </html>

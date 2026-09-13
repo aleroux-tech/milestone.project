@@ -1,48 +1,35 @@
+/* Global Reset */
 * {
     box-sizing: border-box;
 }
 
-* {
-    box-sizing: border-box;
-}
-
+/* Body – Cosmic Dark Mode */
 body {
     margin: 0;
     padding: 0;
-    background-color: #100B1F;
-    /* fallback deep galaxy purple */
-    background-image: url("assets/images/galaxy.jpg");
-    background-size: cover;
-    background-repeat: no-repeat;
-    background-attachment: fixed;
-    background-position: center;
-    color: #BB96DC;
+    background: linear-gradient(135deg, #0d1b2a, #1a0f2e, #100B1F);
+    color: #e6e6e6;
     font-family: Arial, sans-serif;
 }
 
+/* Header */
 header {
     background-color: #0d1b2a;
-    /* Dark Grey Space */
     padding: 24px;
     margin: 0 0 20px;
     border-bottom: 4px solid #9b4dff;
-    /* neon violet glow */
 }
 
-h1 {
-    color: #8749BC;
-    margin: 0 0 12px;
-    padding: 8px;
-    text-align: center;
-}
-
+/* Headings */
+h1,
 h2 {
-    color: #8749BC;
+    color: #e6e6e6;
     margin: 0 0 12px;
     padding: 8px;
     text-align: center;
 }
 
+/* Hero Image */
 .hero-image {
     display: block;
     width: 100%;
@@ -51,17 +38,15 @@ h2 {
     margin: 0 auto;
     padding: 6px;
     border: 3px solid #4dd0ff;
-    /* electric blue */
     background-color: #ffffff;
 }
 
+/* Navigation */
 nav {
-    background-color: #1B1145;
-    /* space navy */
+    background-color: #2a1f55;
     padding: 12px 16px;
     margin: 0 20px 20px;
     border: 2px solid #412279;
-    /* cosmic pink */
 }
 
 #site-nav {
@@ -72,7 +57,7 @@ nav {
 #site-nav a,
 button {
     background-color: #9b4dff;
-    color: #4dd0ff;
+    color: #e6e6e6;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -81,45 +66,48 @@ button {
 
 #site-nav a:hover {
     background: linear-gradient(135deg, #9b4dff, #4dd0ff);
-    /* galaxy gradient */
     transform: scale(1.08);
 }
 
+/* Main Content */
 main {
     padding: 20px;
     margin: 0 20px 20px;
     border: 2px solid #9b4dff;
     background-color: #0d1b2a;
-    /* dark space grey */
 }
 
+/* Sections – Frosted Nebula Panels */
 section {
-    background-color: rgba(26, 15, 46, 0.85);
+    background-color: rgba(13, 27, 42, 0.85);
+    backdrop-filter: blur(4px);
+    padding: 16px;
+    margin-bottom: 20px;
 }
 
+/* Paragraphs */
 p {
     line-height: 1.6;
 }
 
+/* Intro Text */
 .intro {
     font-style: italic;
-    color: #c7b7ff;
-    /* soft lavender */
+    color: #e6e6e6;
 }
 
+/* Notes / Highlights */
 .note {
     font-weight: bold;
     color: #ff4da6;
-    /* cosmic pink */
 }
 
+/* Assignment Details */
 #assignment-details {
-    background-color: #1a0f2e;
-    /* deep galaxy purple */
+    background-color: #0d1b2a;
     margin: 16px 20px;
     padding: 20px;
     border: 2px dashed #4dd0ff;
-    /* electric blue */
 }
 
 #assignment-details ul {
@@ -131,49 +119,45 @@ p {
     margin-bottom: 8px;
 }
 
+/* Themed Section Variants */
 .bonding-time {
-    background-color: #0d1b2a;
-    /* space navy */
+    background-color: rgba(13, 27, 42, 0.85);
 }
 
 .parental-views {
-    background-color: #1a0f2e;
-    /* deep galaxy purple */
+    background-color: rgba(13, 27, 42, 0.85);
 }
 
 .expert-opinions {
-    background-color: #0d1b2a;
-    /* space navy */
+    background-color: rgba(13, 27, 42, 0.85);
 }
 
+/* Footer */
 footer {
     background-color: #0d1b2a;
-    color: #ffffff;
+    color: #e6e6e6;
     padding: 16px;
     margin: 0 20px 20px;
     border: 2px solid #ff4da6;
-    /* cosmic pink */
     text-align: center;
 }
 
+/* Focus Styles – Accessibility */
 nav a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
     outline: 3px solid #9b4dff;
-    /* neon violet glow */
     outline-offset: 2px;
-    box-shadow:
-        0 0 10px #4dd0ff,
-        0 0 20px #9b4dff;
+    box-shadow: 0 0 10px #4dd0ff, 0 0 20px #9b4dff;
 }
 
+/* Forms */
 form fieldset {
     display: grid;
     gap: 8px;
     padding: 16px;
     border: 2px solid #9b4dff;
-    /* neon violet */
 }
 
 form input,
@@ -181,22 +165,14 @@ form textarea {
     width: 100%;
     padding: 8px;
     border: 2px solid #4dd0ff;
-    /* electric blue */
     background-color: #0d1b2a;
-    /* space navy */
     color: #e6e6e6;
-    /* soft grey */
     font: inherit;
 }
 
 form textarea {
     min-height: 120px;
     resize: vertical;
-}
-
-#form-instructions,
-#form-error {
-    margin: 0;
 }
 
 #form-error {
@@ -207,17 +183,15 @@ form textarea {
 form input:user-invalid,
 form textarea:user-invalid {
     border-color: #ff4da6;
-    /* cosmic pink */
 }
 
+/* Buttons */
 button {
     width: fit-content;
     padding: 8px 16px;
     background-color: #8749BC;
-    /* neon violet */
     color: #ffffff;
     border: 2px solid #4dd0ff;
-    /* electric blue */
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s ease;
@@ -228,6 +202,7 @@ button:hover {
     transform: scale(1.08);
 }
 
+/* Card Layout */
 .card-container {
     display: flex;
     flex-direction: column;
@@ -252,6 +227,7 @@ button:hover {
     }
 }
 
+/* Utility */
 .hidden {
     display: none;
 }
