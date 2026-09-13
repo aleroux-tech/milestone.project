@@ -95,9 +95,6 @@ main {
 
 section {
     background-color: rgba(26, 15, 46, 0.85);
-    /* deep purple with transparency */
-    backdrop-filter: blur(4px);
-    /* glassy nebula effect */
 }
 
 p {
