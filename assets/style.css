@@ -1,17 +1,19 @@
-/* Palette variables */
 :root {
     --deep: #5844b3;
     --mid: #6664cf;
     --pink: #cc6bcc;
     --soft: #e49ae5;
-    --light: #ffd2e9;
+    --light-blue: #f2f8ff;
+    /* pale blue base (default) */
+    --light-pink: #fff4f9;
+    /* pale pink alternative */
 
+    --light: var(--light-blue);
+    /* switch to --light-pink for pale pink base */
     --text-dark: #2b0b3a;
-    /* readable on light base */
-    --muted: rgba(43, 11, 58, 0.85);
 }
 
-/* Global Reset */
+/* Reset */
 * {
     box-sizing: border-box;
     margin: 0;
@@ -43,18 +45,18 @@ body::after {
 
 body::before {
     background:
-        radial-gradient(40% 30% at 10% 20%, rgba(255, 210, 233, 0.98) 0%, rgba(255, 210, 233, 0) 40%),
-        radial-gradient(50% 40% at 80% 30%, rgba(228, 154, 229, 0.95) 0%, rgba(228, 154, 229, 0) 45%),
-        radial-gradient(60% 50% at 50% 70%, rgba(102, 100, 207, 0.9) 0%, rgba(102, 100, 207, 0) 50%),
-        radial-gradient(40% 35% at 20% 75%, rgba(88, 68, 179, 0.9) 0%, rgba(88, 68, 179, 0) 45%);
+        radial-gradient(40% 30% at 10% 20%, rgba(255, 210, 233, 0.85) 0%, rgba(255, 210, 233, 0) 40%),
+        radial-gradient(50% 40% at 80% 30%, rgba(228, 154, 229, 0.65) 0%, rgba(228, 154, 229, 0) 45%),
+        radial-gradient(60% 50% at 50% 70%, rgba(102, 100, 207, 0.45) 0%, rgba(102, 100, 207, 0) 50%),
+        radial-gradient(40% 35% at 20% 75%, rgba(88, 68, 179, 0.45) 0%, rgba(88, 68, 179, 0) 45%);
     mix-blend-mode: screen;
-    filter: blur(36px) saturate(1.05);
-    opacity: 0.95;
+    filter: blur(36px) saturate(1.02);
+    opacity: 0.9;
 }
 
 body::after {
     background:
-        linear-gradient(180deg, rgba(255, 210, 233, 0.06), rgba(228, 154, 229, 0.04)),
+        linear-gradient(180deg, rgba(255, 255, 255, 0.06), rgba(228, 154, 229, 0.02)),
         radial-gradient(60% 40% at 50% 10%, rgba(255, 255, 255, 0.06), transparent 40%);
     filter: blur(8px);
     opacity: 0.9;
@@ -65,9 +67,9 @@ header {
     padding: 24px;
     margin: 0 0 20px;
     text-align: center;
-    background: linear-gradient(180deg, rgba(255, 210, 233, 0.35), rgba(228, 154, 229, 0.12));
-    border-bottom: 3px solid rgba(88, 68, 179, 0.12);
-    backdrop-filter: blur(6px);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.6), rgba(228, 154, 229, 0.06));
+    border-bottom: 2px solid rgba(88, 68, 179, 0.08);
+    backdrop-filter: blur(4px);
 }
 
 /* Headings */
@@ -89,9 +91,9 @@ h2 {
     margin: 12px auto;
     padding: 6px;
     border-radius: 10px;
-    border: 3px solid rgba(102, 100, 207, 0.18);
-    background: linear-gradient(180deg, rgba(255, 210, 233, 0.6), rgba(228, 154, 229, 0.2));
-    box-shadow: 0 8px 30px rgba(88, 68, 179, 0.08);
+    border: 2px solid rgba(102, 100, 207, 0.12);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(228, 154, 229, 0.06));
+    box-shadow: 0 8px 20px rgba(88, 68, 179, 0.06);
 }
 
 /* Navigation */
@@ -99,15 +101,11 @@ nav {
     display: flex;
     justify-content: center;
     gap: 12px;
-    padding: 12px 16px;
-    margin: 0 20px 20px;
-    background: linear-gradient(90deg, rgba(102, 100, 207, 0.06), rgba(204, 107, 204, 0.04));
-    border-radius: 12px;
-    border: 1px solid rgba(88, 68, 179, 0.06);
-}
-
-#site-nav {
-    text-align: center;
+    padding: 10px 14px;
+    margin: 0 20px 18px;
+    background: linear-gradient(90deg, rgba(102, 100, 207, 0.03), rgba(204, 107, 204, 0.02));
+    border-radius: 10px;
+    border: 1px solid rgba(88, 68, 179, 0.04);
 }
 
 #site-nav a {
@@ -117,20 +115,20 @@ nav {
     text-decoration: none;
     color: var(--deep);
     font-weight: 700;
-    background: linear-gradient(180deg, rgba(255, 210, 233, 0.6), rgba(228, 154, 229, 0.2));
-    border: 1px solid rgba(102, 100, 207, 0.12);
-    transition: transform 0.18s ease, box-shadow 0.18s ease;
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(228, 154, 229, 0.04));
+    border: 1px solid rgba(102, 100, 207, 0.08);
+    transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
 
 #site-nav a:hover,
 #site-nav a:focus {
     transform: translateY(-3px);
-    box-shadow: 0 8px 20px rgba(102, 100, 207, 0.12);
+    box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08);
 }
 
 /* Main content */
 main {
-    padding: 20px;
+    padding: 18px;
     margin: 0 20px 28px;
 }
 
@@ -138,19 +136,19 @@ main {
 .card-container {
     display: flex;
     flex-direction: column;
-    gap: 20px;
+    gap: 18px;
     padding: 8px;
 }
 
 /* Sections (cards) */
 section {
-    background: linear-gradient(180deg, rgba(255, 210, 233, 0.55), rgba(228, 154, 229, 0.12));
-    border-radius: 12px;
-    padding: 16px;
-    margin-bottom: 20px;
-    border: 1px solid rgba(88, 68, 179, 0.06);
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(228, 154, 229, 0.03));
+    border-radius: 10px;
+    padding: 14px;
+    margin-bottom: 16px;
+    border: 1px solid rgba(88, 68, 179, 0.04);
     color: var(--text-dark);
-    box-shadow: 0 6px 18px rgba(88, 68, 179, 0.04);
+    box-shadow: 0 6px 14px rgba(88, 68, 179, 0.03);
 }
 
 /* Paragraphs */
@@ -168,22 +166,23 @@ p {
 .note {
     color: var(--pink);
     font-weight: 700;
+    opacity: 0.95;
 }
 
 /* Assignment details */
 #assignment-details {
-    background: linear-gradient(180deg, rgba(102, 100, 207, 0.06), rgba(88, 68, 179, 0.04));
-    border: 2px dashed rgba(204, 107, 204, 0.18);
-    padding: 18px;
-    margin: 16px 20px;
+    background: linear-gradient(180deg, rgba(102, 100, 207, 0.03), rgba(88, 68, 179, 0.02));
+    border: 1px dashed rgba(204, 107, 204, 0.12);
+    padding: 14px;
+    margin: 12px 0;
     color: var(--text-dark);
 }
 
 /* Forms */
 form fieldset {
-    border: 1px solid rgba(102, 100, 207, 0.08);
-    padding: 14px;
-    border-radius: 10px;
+    border: 1px solid rgba(102, 100, 207, 0.06);
+    padding: 12px;
+    border-radius: 8px;
 }
 
 form input,
@@ -191,51 +190,41 @@ form textarea {
     width: 100%;
     padding: 10px;
     border-radius: 8px;
-    border: 1px solid rgba(88, 68, 179, 0.08);
-    background: rgba(255, 255, 255, 0.9);
+    border: 1px solid rgba(88, 68, 179, 0.06);
+    background: rgba(255, 255, 255, 0.95);
     color: var(--text-dark);
     margin-top: 6px;
     margin-bottom: 12px;
     font: inherit;
 }
 
-form textarea {
-    min-height: 120px;
-    resize: vertical;
-}
-
-#form-error {
-    color: var(--pink);
-    font-weight: 700;
-}
-
 /* Buttons */
 button {
     display: inline-block;
-    padding: 8px 16px;
+    padding: 8px 14px;
     border-radius: 8px;
     border: none;
     cursor: pointer;
-    background: linear-gradient(90deg, var(--mid), var(--pink));
+    background: linear-gradient(90deg, var(--mid), rgba(204, 107, 204, 0.9));
     color: white;
     font-weight: 700;
-    box-shadow: 0 8px 20px rgba(102, 100, 207, 0.12);
-    transition: transform 0.16s ease, box-shadow 0.16s ease;
+    box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08);
+    transition: transform 0.14s ease, box-shadow 0.14s ease;
 }
 
 button:hover,
 button:focus {
     transform: translateY(-3px);
-    box-shadow: 0 12px 30px rgba(102, 100, 207, 0.18);
+    box-shadow: 0 12px 26px rgba(102, 100, 207, 0.12);
 }
 
 /* Footer */
 footer {
     text-align: center;
-    padding: 16px;
+    padding: 14px;
     margin: 0 20px 20px;
     color: var(--deep);
-    border-top: 1px solid rgba(88, 68, 179, 0.06);
+    border-top: 1px solid rgba(88, 68, 179, 0.04);
 }
 
 /* Responsive grid for cards */
@@ -260,3 +249,78 @@ footer {
 .hidden {
     display: none;
 }
+
+/* Palette overrides — pale blue base, softer pink accents, hide interactive nav link */
+:root {
+    --deep: #5844b3;
+    --mid: #6664cf;
+    --pink: #cc6bcc;
+    --soft: #e49ae5;
+    --light-blue: #f2f8ff;
+    /* pale blue base */
+    --light-pink: #fff4f9;
+    /* pale pink alternative */
+
+    --light: var(--light-blue);
+    /* use var(--light-pink) instead for pale pink base */
+    --accent-pink-rgba: rgba(204, 107, 204, 0.18);
+    /* softer pink for borders/accents */
+    --accent-pink-strong: rgba(204, 107, 204, 0.28);
+    /* slightly stronger for buttons if needed */
+    --text-dark: #2b0b3a;
+}
+
+/* Apply the new page base color (override earlier body background if present) */
+body {
+    background-color: var(--light) !important;
+}
+
+/* Soften pink-heavy radial gradients used for clouding (override earlier rules) */
+body::before {
+    /* keep the same radial layout but use softer pink opacities */
+    background:
+        radial-gradient(40% 30% at 10% 20%, rgba(255, 210, 233, 0.65) 0%, rgba(255, 210, 233, 0) 40%),
+        radial-gradient(50% 40% at 80% 30%, rgba(228, 154, 229, 0.45) 0%, rgba(228, 154, 229, 0) 45%),
+        radial-gradient(60% 50% at 50% 70%, rgba(102, 100, 207, 0.35) 0%, rgba(102, 100, 207, 0) 50%),
+        radial-gradient(40% 35% at 20% 75%, rgba(88, 68, 179, 0.32) 0%, rgba(88, 68, 179, 0) 45%);
+    mix-blend-mode: screen;
+    filter: blur(36px) saturate(1.02);
+    opacity: 0.9;
+}
+
+/* Use softer pink for dashed borders and subtle accents */
+#assignment-details,
+nav,
+header,
+section {
+    border-color: var(--accent-pink-rgba) !important;
+}
+
+/* Buttons: keep purple -> pink gradient but reduce pink saturation on hover */
+button {
+    background: linear-gradient(90deg, var(--mid), rgba(204, 107, 204, 0.9)) !important;
+    box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08) !important;
+}
+
+button:hover,
+button:focus {
+    background: linear-gradient(90deg, var(--mid), rgba(204, 107, 204, 0.6)) !important;
+    box-shadow: 0 12px 26px rgba(102, 100, 207, 0.12) !important;
+}
+
+/* Nav link hide rule — hides only the interactive.html link */
+#site-nav a[href$="interactive.html"] {
+    display: none !important;
+    width: 0;
+    height: 0;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    overflow: hidden;
+    visibility: hidden;
+}
+
+/* Optional: if you want the pale pink base instead, uncomment this and comment the --light assignment above */
+/*
+:root { --light: var(--light-pink); }
+*/
