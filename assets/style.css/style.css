@@ -2,13 +2,19 @@
     box-sizing: border-box;
 }
 
+* {
+    box-sizing: border-box;
+}
+
 body {
     margin: 0;
     padding: 0;
-    background-color: #1a0f2e;
-    /*Deep Galaxy Purple */
-    color: #e6e6e6;
-    /* Soft Grey Text */
+    background-image: url("assets/images/galaxy.jpg");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+    background-position: center;
+    color: #BB96DC;
     font-family: Arial, sans-serif;
 }
 
@@ -22,8 +28,14 @@ header {
 }
 
 h1 {
-    color: #c7b7ff;
-    /* soft lavender */
+    color: #8749BC;
+    margin: 0 0 12px;
+    padding: 8px;
+    text-align: center;
+}
+
+h2 {
+    color: #8749BC;
     margin: 0 0 12px;
     padding: 8px;
     text-align: center;
@@ -42,11 +54,11 @@ h1 {
 }
 
 nav {
-    background-color: #0d1b2a;
+    background-color: #1B1145;
     /* space navy */
     padding: 12px 16px;
     margin: 0 20px 20px;
-    border: 2px solid #ff4da6;
+    border: 2px solid #412279;
     /* cosmic pink */
 }
 
@@ -59,29 +71,16 @@ nav {
 button {
     background-color: #9b4dff;
     color: #4dd0ff;
-    /* electric blue text */
-}
-
-/* neon violet */
-color: white;
-text-decoration: none;
-border-radius: 8px;
-font-weight: bold;
-transition: background-color 0.3s ease,
-transform 0.2s ease;
+    text-decoration: none;
+    border-radius: 8px;
+    font-weight: bold;
+    transition: background-color 0.3s ease, transform 0.2s ease;
 }
 
 #site-nav a:hover {
     background: linear-gradient(135deg, #9b4dff, #4dd0ff);
     /* galaxy gradient */
     transform: scale(1.08);
-
-}
-
-nav a {
-    color: #ffffff;
-    text-decoration: none;
-    margin-right: 10px;
 }
 
 main {
@@ -93,12 +92,10 @@ main {
 }
 
 section {
-    margin: 16px 0;
-    padding: 16px;
-    border: 2px solid #4dd0ff;
-    /* electric blue */
-    background-color: #1a0f2e;
-    /* deep galaxy purple */
+    background-color: rgba(26, 15, 46, 0.85);
+    /* deep purple with transparency */
+    backdrop-filter: blur(4px);
+    /* glassy nebula effect */
 }
 
 p {
@@ -204,7 +201,7 @@ form textarea {
 }
 
 #form-error {
-    color: #9c2f50;
+    color: #ff4da6;
     font-weight: bold;
 }
 
@@ -217,7 +214,7 @@ form textarea:user-invalid {
 button {
     width: fit-content;
     padding: 8px 16px;
-    background-color: #9b4dff;
+    background-color: #8749BC;
     /* neon violet */
     color: #ffffff;
     border: 2px solid #4dd0ff;
@@ -228,8 +225,7 @@ button {
 }
 
 button:hover {
-    background: linear-gradient(135deg, #9b4dff, #4dd0ff);
-    /* galaxy gradient */
+    background: linear-gradient(135deg, #BB96DC, #100B1F);
     transform: scale(1.08);
 }
 
@@ -239,8 +235,6 @@ button:hover {
     gap: 20px;
     padding: 16px;
 }
-
-background-color: #0d1b2a;
 
 @media (min-width: 768px) {
     .card-container {
