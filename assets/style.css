@@ -3,27 +3,27 @@
     box-sizing: border-box;
 }
 
-/* Body – Cosmic Dark Mode */
+/* Body – Galaxy Purple Theme */
 body {
     margin: 0;
     padding: 0;
-    background: linear-gradient(135deg, #0d1b2a, #1a0f2e, #100B1F);
-    color: #e6e6e6;
+    background: linear-gradient(135deg, #5844b3, #6664cf);
+    color: #ffd2e9;
     font-family: Arial, sans-serif;
 }
 
 /* Header */
 header {
-    background-color: #0d1b2a;
+    background-color: #5844b3;
     padding: 24px;
     margin: 0 0 20px;
-    border-bottom: 4px solid #9b4dff;
+    border-bottom: 4px solid #cc6bcc;
 }
 
 /* Headings */
 h1,
 h2 {
-    color: #e6e6e6;
+    color: #ffd2e9;
     margin: 0 0 12px;
     padding: 8px;
     text-align: center;
@@ -37,16 +37,16 @@ h2 {
     height: auto;
     margin: 0 auto;
     padding: 6px;
-    border: 3px solid #4dd0ff;
-    background-color: #ffffff;
+    border: 3px solid #6664cf;
+    background-color: #ffd2e9;
 }
 
 /* Navigation */
 nav {
-    background-color: #2a1f55;
+    background-color: #6664cf;
     padding: 12px 16px;
     margin: 0 20px 20px;
-    border: 2px solid #412279;
+    border: 2px solid #cc6bcc;
 }
 
 #site-nav {
@@ -56,8 +56,8 @@ nav {
 
 #site-nav a,
 button {
-    background-color: #9b4dff;
-    color: #e6e6e6;
+    background-color: #cc6bcc;
+    color: #5844b3;
     text-decoration: none;
     border-radius: 8px;
     font-weight: bold;
@@ -65,7 +65,7 @@ button {
 }
 
 #site-nav a:hover {
-    background: linear-gradient(135deg, #9b4dff, #4dd0ff);
+    background: linear-gradient(135deg, #cc6bcc, #e49ae5);
     transform: scale(1.08);
 }
 
@@ -73,16 +73,16 @@ button {
 main {
     padding: 20px;
     margin: 0 20px 20px;
-    border: 2px solid #9b4dff;
-    background-color: #0d1b2a;
+    border: 2px solid #cc6bcc;
+    background-color: #5844b3;
 }
 
-/* Sections – Frosted Nebula Panels */
+/* Sections – Soft Cards */
 section {
-    background-color: rgba(13, 27, 42, 0.85);
-    backdrop-filter: blur(4px);
+    background-color: #6664cf;
     padding: 16px;
     margin-bottom: 20px;
+    border-radius: 8px;
 }
 
 /* Paragraphs */
@@ -93,21 +93,21 @@ p {
 /* Intro Text */
 .intro {
     font-style: italic;
-    color: #e6e6e6;
+    color: #ffd2e9;
 }
 
 /* Notes / Highlights */
 .note {
     font-weight: bold;
-    color: #ff4da6;
+    color: #e49ae5;
 }
 
 /* Assignment Details */
 #assignment-details {
-    background-color: #0d1b2a;
+    background-color: #6664cf;
     margin: 16px 20px;
     padding: 20px;
-    border: 2px dashed #4dd0ff;
+    border: 2px dashed #cc6bcc;
 }
 
 #assignment-details ul {
@@ -120,25 +120,19 @@ p {
 }
 
 /* Themed Section Variants */
-.bonding-time {
-    background-color: rgba(13, 27, 42, 0.85);
-}
-
-.parental-views {
-    background-color: rgba(13, 27, 42, 0.85);
-}
-
+.bonding-time,
+.parental-views,
 .expert-opinions {
-    background-color: rgba(13, 27, 42, 0.85);
+    background-color: #6664cf;
 }
 
 /* Footer */
 footer {
-    background-color: #0d1b2a;
-    color: #e6e6e6;
+    background-color: #5844b3;
+    color: #ffd2e9;
     padding: 16px;
     margin: 0 20px 20px;
-    border: 2px solid #ff4da6;
+    border: 2px solid #e49ae5;
     text-align: center;
 }
 
@@ -147,9 +141,9 @@ nav a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #9b4dff;
+    outline: 3px solid #e49ae5;
     outline-offset: 2px;
-    box-shadow: 0 0 10px #4dd0ff, 0 0 20px #9b4dff;
+    box-shadow: 0 0 10px #cc6bcc, 0 0 20px #e49ae5;
 }
 
 /* Forms */
@@ -157,16 +151,16 @@ form fieldset {
     display: grid;
     gap: 8px;
     padding: 16px;
-    border: 2px solid #9b4dff;
+    border: 2px solid #cc6bcc;
 }
 
 form input,
 form textarea {
     width: 100%;
     padding: 8px;
-    border: 2px solid #4dd0ff;
-    background-color: #0d1b2a;
-    color: #e6e6e6;
+    border: 2px solid #e49ae5;
+    background-color: #5844b3;
+    color: #ffd2e9;
     font: inherit;
 }
 
@@ -176,29 +170,29 @@ form textarea {
 }
 
 #form-error {
-    color: #ff4da6;
+    color: #e49ae5;
     font-weight: bold;
 }
 
 form input:user-invalid,
 form textarea:user-invalid {
-    border-color: #ff4da6;
+    border-color: #e49ae5;
 }
 
 /* Buttons */
 button {
     width: fit-content;
     padding: 8px 16px;
-    background-color: #8749BC;
-    color: #ffffff;
-    border: 2px solid #4dd0ff;
+    background-color: #cc6bcc;
+    color: #5844b3;
+    border: 2px solid #e49ae5;
     cursor: pointer;
     border-radius: 8px;
     transition: background 0.3s ease, transform 0.2s ease;
 }
 
 button:hover {
-    background: linear-gradient(135deg, #BB96DC, #100B1F);
+    background: linear-gradient(135deg, #e49ae5, #ffd2e9);
     transform: scale(1.08);
 }
 
