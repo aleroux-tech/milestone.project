@@ -3,24 +3,30 @@
     box-sizing: border-box;
 }
 
+/* Body */
 body {
     margin: 0;
     padding: 0;
-    background-color: #f7f3ea;
+    background-color: #EEF9FA;
+    /* pale blue */
     color: #23374d;
+    /* dark navy text */
     font-family: Arial, sans-serif;
 }
 
 /* Header */
 header {
-    background-color: #dfe9f5;
+    background-color: #C8F1E8;
+    /* mint green */
     padding: 24px;
     margin: 0 0 20px;
-    border-bottom: 4px solid #9c2f50;
+    border-bottom: 4px solid #FADECF;
+    /* peach accent */
 }
 
 h1 {
-    color: #2f6f4f;
+    color: #23374d;
+    /* dark navy for contrast */
     margin: 0 0 12px;
     padding: 8px;
     text-align: center;
@@ -34,47 +40,58 @@ h1 {
     height: auto;
     margin: 0 auto;
     padding: 6px;
-    border: 3px solid #2f6f4f;
+    border: 3px solid #BFC8C5;
+    /* soft gray */
     background-color: #ffffff;
 }
 
 /* Navigation */
 nav {
-    background-color: #9c2f50;
+    background-color: #C8F1E8;
+    /* mint green */
     padding: 12px 16px;
     margin: 0 20px 20px;
-    border: 2px solid #9c2f50;
+    border: 2px solid #FADECF;
+    /* peach */
 }
 
 nav a {
-    color: #ffffff;
+    color: #23374d;
+    /* dark navy */
     text-decoration: none;
     margin-right: 10px;
     padding: 6px 12px;
-    border: 2px solid #ffffff;
+    border: 2px solid #FADECF;
+    /* peach */
     border-radius: 6px;
-    background-color: #9c2f50;
+    background-color: #FFE8BD;
+    /* soft yellow */
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #2f6f4f;
-    /* your soft green */
-    color: #ffffff;
+    background-color: #FADECF;
+    /* peach hover */
+    color: #23374d;
 }
 
 /* Main Content */
 main {
     padding: 20px;
     margin: 0 20px 20px;
-    border: 2px solid #2f6f4f;
+    border: 2px solid #FADECF;
+    /* peach */
     background-color: #ffffff;
 }
 
+/* Section Blocks */
 section {
     margin: 16px 0;
     padding: 16px;
-    border: 2px solid #9c2f50;
+    border: 2px solid #FADECF;
+    /* peach */
+    background-color: #DEFDEF;
+    /* light mint */
 }
 
 p {
@@ -83,11 +100,13 @@ p {
 
 /* Footer */
 footer {
-    background-color: #23374d;
-    color: #ffffff;
+    background-color: #BFC8C5;
+    /* soft gray */
+    color: #23374d;
     padding: 16px;
     margin: 0 20px 20px;
-    border: 2px solid #9c2f50;
+    border: 2px solid #FADECF;
+    /* peach */
     text-align: center;
 }
 
@@ -96,7 +115,8 @@ nav a:focus-visible,
 button:focus-visible,
 input:focus-visible,
 textarea:focus-visible {
-    outline: 3px solid #9c2f50;
+    outline: 3px solid #FADECF;
+    /* peach */
     outline-offset: 2px;
 }
 
@@ -105,14 +125,16 @@ form fieldset {
     display: grid;
     gap: 8px;
     padding: 16px;
-    border: 2px solid #2f6f4f;
+    border: 2px solid #BFC8C5;
+    /* soft gray */
 }
 
 form input,
 form textarea {
     width: 100%;
     padding: 8px;
-    border: 2px solid #23374d;
+    border: 2px solid #BFC8C5;
+    /* soft gray */
     font: inherit;
 }
 
@@ -127,23 +149,35 @@ form textarea {
 }
 
 #form-error {
-    color: #9c2f50;
+    color: #FADECF;
+    /* peach */
     font-weight: bold;
 }
 
 form input:user-invalid,
 form textarea:user-invalid {
-    border-color: #9c2f50;
+    border-color: #FADECF;
+    /* peach */
 }
 
 /* Buttons */
 button {
     width: fit-content;
     padding: 8px 16px;
-    background-color: #23374d;
-    color: #ffffff;
-    border: 2px solid #23374d;
+    background-color: #C8F1E8;
+    /* mint */
+    color: #23374d;
+    /* navy */
+    border: 2px solid #FADECF;
+    /* peach */
     cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+button:hover {
+    background-color: #FADECF;
+    /* peach */
+    color: #23374d;
 }
 
 /* Card Layout */
@@ -158,8 +192,11 @@ button {
     flex: 1 1 auto;
     gap: 20px;
     padding: 16px;
-    background-color: #f4f4f4;
+    background-color: #DEFDEF;
+    /* light mint */
     border-radius: 8px;
+    border: 2px solid #FADECF;
+    /* peach */
 }
 
 /* Responsive Layout */
