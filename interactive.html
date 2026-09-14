@@ -3,29 +3,37 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Interactive DOM Homework</title>
+    <title>Who I Am & Who Are You? – Interactive Fun</title>
 
-    <!-- Correct CSS path -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
-    <h1>Interactive DOM Homework</h1>
+    <h1>Who I Am & Who Are You?</h1>
+    <p>
+      This page is just a little interactive section I made to show some of the
+      JavaScript I've learned. You can click around, type things in, and have a
+      little fun while learning a bit about me.
+    </p>
 
-    <h2>1. Button Changes Content</h2>
-    <button id="factButton">Show Beach Fact</button>
-    <p id="beachFact">Click the button to see a fact!</p>
+    <!-- FUN FACT BUTTON -->
+    <h2>Click to See a Fun Fact About Me</h2>
+    <button id="factButton">Show a Fun Fact</button>
+    <p id="beachFact">Click the button to see a fun fact!</p>
 
-    <h2>2. Style Changes on Input</h2>
+    <!-- COLOR INPUT -->
+    <h2>Guess My Favorite Color</h2>
+    <p>Type a color and watch the text change as you type.</p>
     <input id="colorInput" type="text" placeholder="Type a color" />
     <p id="colorPreview">This text changes color as you type.</p>
 
-    <h2>3. Dynamic List</h2>
-    <input id="listInput" type="text" placeholder="Add a beach item" />
-    <button id="addItem">Add Item</button>
+    <!-- DYNAMIC LIST -->
+    <h2>Add a Fun Fact About Yourself</h2>
+    <p>Type something about yourself and add it to the list.</p>
+    <input id="listInput" type="text" placeholder="Add your fun fact" />
+    <button id="addItem">Add Fact</button>
     <ul id="itemList"></ul>
 
-    <!-- Correct JS path -->
     <script src="assets/script.js"></script>
   </body>
 </html>
