@@ -40,7 +40,7 @@ h1 {
 
 /* Navigation */
 nav {
-    background-color: #23374d;
+    background-color: #9c2f50;
     padding: 12px 16px;
     margin: 0 20px 20px;
     border: 2px solid #9c2f50;
@@ -53,12 +53,13 @@ nav a {
     padding: 6px 12px;
     border: 2px solid #ffffff;
     border-radius: 6px;
-    background-color: #23374D;
+    background-color: #9c2f50;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
 nav a:hover {
-    background-color: #9c2f50;
+    background-color: #2f6f4f;
+    /* your soft green */
     color: #ffffff;
 }
 
