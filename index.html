@@ -1,63 +1,63 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Families That Game Together — Home</title>
+    <title>Families That Game Together</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
-
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
     <header>
-      <h1>Families That Game Together</h1>
+      <h1>Is It "Normal" For Moms to Be Gamer?</h1>
 
       <img
-        src="assets/images/gamingoverload.png"
-        alt="Colorful gaming illustration representing creativity and development"
+        src="assets/images/chatgptfortnitefam.png"
+        alt="A family gaming scene"
         class="hero-image"
         loading="eager"
         decoding="async"
       />
-
-      <p class="intro">
-        Welcome — this portfolio shows my journey through web development, with
-        projects that highlight HTML, CSS, accessibility, and JavaScript.
-      </p>
     </header>
-
-    <nav id="site-nav" aria-label="Primary navigation">
-      <a href="index.html" aria-current="page">Home</a> |
-      <a href="projects.html">Projects</a> | <a href="about.html">About</a> |
-      <a href="interactive.html">Interactive</a>
+    <nav id="site-nav">
+      <a href="index.html">Home</a> |
+      <a href="projects.html">Projects/Work</a> |
+      <a href="about.html">About/Contact</a>
+      <a href="interactive.html">Interactive Homework</a>
     </nav>
+    <button id="toggleCards">Show/Hide sections</button>
+    <main id="main-content">
+      <div class="card-container">
+        <section class="bonding-time">
+          <h2>What statistics say</h2>
+          <p>I love the bonding time we have while gaming</p>
+          <p>
+            Gaming together with my kids, is a real bonding experience that we
+            all love and enjoy.
+          </p>
+        </section>
+        <section class="parental-views">
+          <h2>What Parents Think</h2>
+          <p>Does It Really Matter What Others Think</p>
+        </section>
 
-    <main id="main-content" role="main">
-      <section>
-        <h2>About this Portfolio</h2>
-        <p>
-          This site is my capstone draft. It includes multiple pages with
-          semantic HTML, responsive CSS, accessible features, and interactive
-          JavaScript examples.
-        </p>
-      </section>
+        <section class="expert-opinions">
+          <h2>What Experts Say</h2>
+          <p>Expert opinions on the benefits of family gaming</p>
+        </section>
 
-      <section>
-        <h2>Highlights</h2>
-        <ul>
-          <li>Two complete pages with real content (Home and Projects)</li>
-          <li>Responsive layout for mobile and desktop</li>
-          <li>Accessible markup and keyboard focus styles</li>
-          <li>
-            Interactive page with DOM updates (facts, color preview, add list)
-          </li>
-        </ul>
-      </section>
+        <section>
+          <h2>Our Favorite Games</h2>
+          <p>Some of our favorite games to play as a family</p>
+          <ul>
+            <li>Fortnite Is An All Time Favorite</li>
+            <li>Minecraft is My Youngest Son's Favorite Game</li>
+            <li>Call of Duty is My Oldest Son's Favorite Game</li>
+          </ul>
+        </section>
+      </div>
     </main>
-
-    <footer>
+    <footer id="page-footer">
       <p>&copy; 2026 Families That Game Together</p>
     </footer>
+
+    <script src="assets/script.js"></script>
   </body>
 </html>

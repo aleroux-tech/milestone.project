@@ -1,108 +1,31 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>Interactive Gaming Network</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Interactive DOM Homework</title>
+
+    <!-- Correct CSS path -->
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
+    <h1>Interactive DOM Homework</h1>
 
-    <header>
-      <h1>Interactive Gaming Network</h1>
+    <h2>1. Button Changes Content</h2>
+    <button id="factButton">Show Beach Fact</button>
+    <p id="beachFact">Click the button to see a fact!</p>
 
-      <img
-        src="assets/images/gamingpc.png"
-        alt="Gaming computer setup with neon lighting"
-        class="hero-image"
-        loading="eager"
-        decoding="async"
-      />
+    <h2>2. Style Changes on Input</h2>
+    <input id="colorInput" type="text" placeholder="Type a color" />
+    <p id="colorPreview">This text changes color as you type.</p>
 
-      <p class="intro">
-        Explore fun gaming interactions — customize your gamer tag, learn gaming
-        facts, and share your favorite games!
-      </p>
-    </header>
+    <h2>3. Dynamic List</h2>
+    <input id="listInput" type="text" placeholder="Add a beach item" />
+    <button id="addItem">Add Item</button>
+    <ul id="itemList"></ul>
 
-    <nav id="site-nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a> | <a href="projects.html">Projects</a> |
-      <a href="about.html">About</a> |
-      <a href="interactive.html" aria-current="page">Interactive</a>
-    </nav>
-
-    <main id="main-content" role="main">
-      <div class="card-container">
-        <!-- Gaming Fact Section -->
-        <section aria-labelledby="fact-heading">
-          <h2 id="fact-heading">Gaming Fact Generator</h2>
-          <button id="factButton" type="button">Show Gaming Fact</button>
-          <p id="beachFact" aria-live="polite">
-            Click the button to see a gaming fact!
-          </p>
-        </section>
-
-        <!-- Gamer Tag Color Customizer -->
-        <section aria-labelledby="tag-heading">
-          <h2 id="tag-heading">Gamer Tag Customization Station</h2>
-
-          <label for="colorInput">Choose a color for your gamer tag</label>
-          <input
-            id="colorInput"
-            type="text"
-            inputmode="text"
-            placeholder="Type a color (e.g., red, #00f, rgb(0,0,255))"
-            aria-describedby="colorHelp"
-          />
-          <p id="colorHelp" class="sr-only">
-            You can type a color name, hex, or rgb value.
-          </p>
-
-          <p id="colorPreview" aria-live="polite" style="margin-top: 12px">
-            <strong>Gamer Tag Preview:</strong>
-            <span
-              id="previewText"
-              style="
-                display: inline-block;
-                padding: 6px 10px;
-                border-radius: 6px;
-              "
-            >
-              PlayerOne
-            </span>
-          </p>
-        </section>
-
-        <!-- Favorite Games List -->
-        <section aria-labelledby="games-heading">
-          <h2 id="games-heading">Favorite Games</h2>
-
-          <label for="listInput">Add your favorite game</label>
-          <input
-            id="listInput"
-            type="text"
-            placeholder="Write your favorite game"
-            aria-describedby="listHelp"
-          />
-          <p id="listHelp" class="sr-only">
-            Type a game name and press Add Game.
-          </p>
-
-          <div style="margin-top: 8px">
-            <button id="addItem" type="button">Add Game</button>
-          </div>
-
-          <ul id="itemList" aria-live="polite" style="margin-top: 12px"></ul>
-        </section>
-      </div>
-    </main>
-
-    <footer>
-      <p>&copy; 2026 Families That Game Together</p>
-    </footer>
-
+    <!-- Correct JS path -->
     <script src="assets/script.js"></script>
   </body>
 </html>

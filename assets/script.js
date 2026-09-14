@@ -1,53 +1,80 @@
-document.addEventListener("DOMContentLoaded", () => {
-  // Fact generator
-  const facts = [
-    "The first video game was created in the 1950s.",
-    "Speedrunning communities time games to the millisecond.",
-    "Cooperative gaming can improve teamwork and communication.",
-    "The original arcade era helped shape modern game design.",
-    "Indie games often push creative boundaries with small teams.",
-  ];
-  const factButton = document.getElementById("factButton");
-  const beachFact = document.getElementById("beachFact");
-  if (factButton && beachFact) {
-    factButton.addEventListener("click", () => {
-      const f = facts[Math.floor(Math.random() * facts.length)];
-      beachFact.textContent = f;
-    });
-  }
+const form = document.querySelector("#contact-form");
+const errorMessage = document.querySelector("#form-error");
 
-  // Color preview for gamer tag
-  const colorInput = document.getElementById("colorInput");
-  const previewText = document.getElementById("previewText");
-  if (colorInput && previewText) {
-    colorInput.addEventListener("input", () => {
-      // Apply the value as a color; invalid values will be ignored by the browser
-      previewText.style.color = colorInput.value || "";
-    });
-  }
+if (form) {
+  form.addEventListener("submit", (event) => {
+    const name = document.querySelector("#name").value.trim();
+    const email = document.querySelector("#email").value.trim();
+    const subject = document.querySelector("#subject").value.trim();
+    const message = document.querySelector("#message").value.trim();
 
-  // Add favorite game to list
-  const addItem = document.getElementById("addItem");
-  const listInput = document.getElementById("listInput");
-  const itemList = document.getElementById("itemList");
-  if (addItem && listInput && itemList) {
-    addItem.addEventListener("click", () => {
-      const val = listInput.value.trim();
-      if (!val) return;
-      const li = document.createElement("li");
-      li.textContent = val;
-      itemList.appendChild(li);
-      listInput.value = "";
-      // Move focus back to input for quick entry
-      listInput.focus();
-    });
+    if (!name || !email || !subject || !message) {
+      event.preventDefault();
+      errorMessage.textContent =
+        "Please complete every required field before sending.";
+      errorMessage.style.display = "block";
+    }
+  });
 
-    // Allow Enter key to add item
-    listInput.addEventListener("keydown", (e) => {
-      if (e.key === "Enter") {
-        e.preventDefault();
-        addItem.click();
-      }
+  document
+    .querySelectorAll("#name, #email, #subject, #message")
+    .forEach((input) => {
+      input.addEventListener("input", () => {
+        errorMessage.style.display = "none";
+      });
     });
-  }
-});
+}
+
+const toggleForm = document.querySelector("#toggleForm");
+const contactForm = document.querySelector("#contact-form");
+
+if (toggleForm && contactForm) {
+  toggleForm.addEventListener("click", () => {
+    contactForm.classList.toggle("hidden");
+  });
+}
+
+const toggleCards = document.querySelector("#toggleCards");
+const cardContainer = document.querySelector(".card-container");
+
+if (toggleCards && cardContainer) {
+  toggleCards.addEventListener("click", () => {
+    cardContainer.classList.toggle("hidden");
+  });
+}
+
+const factButton = document.querySelector("#factButton");
+const beachFact = document.querySelector("#beachFact");
+
+if (factButton && beachFact) {
+  factButton.addEventListener("click", () => {
+    beachFact.textContent =
+      "Fun fact: Beaches can be made of coral, lava, shells, or even glass!";
+  });
+}
+
+const colorInput = document.querySelector("#colorInput");
+const colorPreview = document.querySelector("#colorPreview");
+
+if (colorInput && colorPreview) {
+  colorInput.addEventListener("input", () => {
+    colorPreview.style.color = colorInput.value;
+  });
+}
+
+const listInput = document.querySelector("#listInput");
+const addItem = document.querySelector("#addItem");
+const itemList = document.querySelector("#itemList");
+
+if (listInput && addItem && itemList) {
+  addItem.addEventListener("click", () => {
+    const newItemText = listInput.value.trim();
+    if (newItemText === "") return;
+
+    const li = document.createElement("li");
+    li.textContent = newItemText;
+
+    itemList.appendChild(li);
+    listInput.value = "";
+  });
+}

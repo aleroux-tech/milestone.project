@@ -1,47 +1,87 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="utf-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1" />
-    <title>About — Families That Game Together</title>
+    <title>About Me</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
-    <a class="skip-link" href="#main-content">Skip to main content</a>
-
     <header>
-      <h1>About / Contact</h1>
+      <h1>About Me and Contacts</h1>
+
+      <img
+        src="assets/images/chatgptfortnitefam.png"
+        alt="A family gaming scene"
+        class="hero-image"
+        loading="eager"
+        decoding="async"
+      />
     </header>
 
-    <nav id="site-nav" aria-label="Primary navigation">
-      <a href="index.html">Home</a> | <a href="projects.html">Projects</a> |
-      <a href="about.html" aria-current="page">About</a> |
-      <a href="interactive.html">Interactive</a>
+    <nav>
+      <a href="index.html">Home</a>
+      <a href="projects.html">Projects/Work</a>
+      <a href="about.html">About/Contact</a>
     </nav>
 
-    <main id="main-content" role="main">
-      <section>
-        <h2>About Me</h2>
-        <p>
-          I am Amanda — a web development student building a capstone portfolio
-          that demonstrates HTML, CSS, accessibility, and JavaScript skills.
-          This site reflects projects completed during the course and is
-          deployed on GitHub Pages.
-        </p>
-      </section>
+    <main>
+      <button id="toggleForm">Show/Hide Contact Form</button>
 
-      <section>
-        <h2>Contact</h2>
-        <p>
-          For feedback or questions about this portfolio, please contact me via
-          the course platform or include a note in the peer review comments.
-        </p>
-      </section>
+      <form id="contact-form">
+        <fieldset>
+          <legend>Send a message</legend>
+          <p id="form-instructions">All fields are required.</p>
+
+          <label for="name">Name</label>
+          <input
+            type="text"
+            id="name"
+            name="name"
+            required
+            aria-required="true"
+            aria-describedby="form-error"
+          />
+
+          <label for="email">Email</label>
+          <input
+            type="email"
+            id="email"
+            name="email"
+            required
+            aria-required="true"
+            aria-describedby="form-error"
+          />
+
+          <label for="subject">Subject</label>
+          <input
+            type="text"
+            id="subject"
+            name="subject"
+            required
+            aria-required="true"
+            aria-describedby="form-error"
+          />
+
+          <label for="message">Message</label>
+          <textarea
+            id="message"
+            name="message"
+            required
+            aria-required="true"
+            aria-describedby="form-error"
+          ></textarea>
+
+          <p id="form-error" role="alert" aria-live="polite">
+            Please complete every required field before sending.
+          </p>
+
+          <button type="submit">Send</button>
+        </fieldset>
+      </form>
     </main>
-
     <footer>
       <p>&copy; 2026 Families That Game Together</p>
     </footer>
+    <script src="assets/script.js"></script>
   </body>
 </html>
