@@ -1,7 +1,3 @@
-// =========================
-// FORM VALIDATION (about.html only)
-// =========================
-
 const form = document.querySelector("#contact-form");
 const errorMessage = document.querySelector("#form-error");
 
@@ -20,7 +16,6 @@ if (form) {
     }
   });
 
-  // Clear errors when typing
   document
     .querySelectorAll("#name, #email, #subject, #message")
     .forEach((input) => {
@@ -29,10 +24,6 @@ if (form) {
       });
     });
 }
-
-// =========================
-// SHOW/HIDE CONTACT FORM (about.html)
-// =========================
 
 const toggleForm = document.querySelector("#toggleForm");
 const contactForm = document.querySelector("#contact-form");
@@ -43,10 +34,6 @@ if (toggleForm && contactForm) {
   });
 }
 
-// =========================
-// SHOW/HIDE SECTIONS (index.html)
-// =========================
-
 const toggleCards = document.querySelector("#toggleCards");
 const cardContainer = document.querySelector(".card-container");
 
@@ -56,11 +43,6 @@ if (toggleCards && cardContainer) {
   });
 }
 
-// =========================
-// Homework 7 Interactions
-// =========================
-
-// 1. button content
 const factButton = document.querySelector("#factButton");
 const beachFact = document.querySelector("#beachFact");
 
@@ -71,7 +53,6 @@ if (factButton && beachFact) {
   });
 }
 
-// 2. Style changes on input
 const colorInput = document.querySelector("#colorInput");
 const colorPreview = document.querySelector("#colorPreview");
 
@@ -81,7 +62,6 @@ if (colorInput && colorPreview) {
   });
 }
 
-// 3. Dynamic list
 const listInput = document.querySelector("#listInput");
 const addItem = document.querySelector("#addItem");
 const itemList = document.querySelector("#itemList");
