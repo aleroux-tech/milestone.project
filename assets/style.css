@@ -50,12 +50,10 @@ nav a {
     color: #ffffff;
     text-decoration: none;
     margin-right: 10px;
-
-    /* New styles to make them look like buttons */
     padding: 6px 12px;
     border: 2px solid #ffffff;
     border-radius: 6px;
-    background-color: #2f6f4f;
+    background-color: #23374D;
     transition: background-color 0.3s ease, color 0.3s ease;
 }
 
