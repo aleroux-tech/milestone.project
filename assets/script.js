@@ -3,8 +3,8 @@ const factButton = document.getElementById("factButton");
 const beachFact = document.getElementById("beachFact");
 
 const funFacts = [
-  "I’m a mom of five boys.",
-  "I’ve always been good with technology.",
+  "I'm a mom of five boys.",
+  "I've always been good with technology.",
   "I love learning new things.",
   "Web design is something I honestly enjoy.",
   "People always come to me when they need tech help.",
