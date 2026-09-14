@@ -1,14 +1,15 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
     <title>Interactive Gaming Network</title>
-
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
       <h1>Interactive Gaming Network</h1>
 
@@ -26,49 +27,74 @@
       </p>
     </header>
 
-    <nav id="site-nav">
-      <a href="index.html">Home</a> |
-      <a href="projects.html">Projects/Work</a> |
-      <a href="about.html">About/Contact</a> |
-      <a href="interactive.html">Interactive Gaming Network</a>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a> | <a href="projects.html">Projects</a> |
+      <a href="about.html">About</a> |
+      <a href="interactive.html" aria-current="page">Interactive</a>
     </nav>
 
-    <main>
+    <main id="main-content" role="main">
       <div class="card-container">
         <!-- Gaming Fact Section -->
-        <section>
-          <h2>Gaming Fact Generator</h2>
-          <button id="factButton">Show Gaming Fact</button>
-          <p id="beachFact">Click the button to see a gaming fact!</p>
+        <section aria-labelledby="fact-heading">
+          <h2 id="fact-heading">Gaming Fact Generator</h2>
+          <button id="factButton" type="button">Show Gaming Fact</button>
+          <p id="beachFact" aria-live="polite">
+            Click the button to see a gaming fact!
+          </p>
         </section>
 
         <!-- Gamer Tag Color Customizer -->
-        <section>
-          <h2>Gamer Tag Customization Station</h2>
+        <section aria-labelledby="tag-heading">
+          <h2 id="tag-heading">Gamer Tag Customization Station</h2>
 
-          <label for="colorInput">Choose a color for your gamer tag:</label>
+          <label for="colorInput">Choose a color for your gamer tag</label>
           <input
             id="colorInput"
             type="text"
-            placeholder="Type a color (e.g., red, blue, green)"
+            inputmode="text"
+            placeholder="Type a color (e.g., red, #00f, rgb(0,0,255))"
+            aria-describedby="colorHelp"
           />
+          <p id="colorHelp" class="sr-only">
+            You can type a color name, hex, or rgb value.
+          </p>
 
-          <p id="colorPreview">Gamer Tag Preview</p>
+          <p id="colorPreview" aria-live="polite" style="margin-top: 12px">
+            <strong>Gamer Tag Preview:</strong>
+            <span
+              id="previewText"
+              style="
+                display: inline-block;
+                padding: 6px 10px;
+                border-radius: 6px;
+              "
+            >
+              PlayerOne
+            </span>
+          </p>
         </section>
 
         <!-- Favorite Games List -->
-        <section>
-          <h2>Favorite Games</h2>
+        <section aria-labelledby="games-heading">
+          <h2 id="games-heading">Favorite Games</h2>
 
-          <label for="listInput">Add your favorite game:</label>
+          <label for="listInput">Add your favorite game</label>
           <input
             id="listInput"
             type="text"
             placeholder="Write your favorite game"
+            aria-describedby="listHelp"
           />
-          <button id="addItem">Add Game</button>
+          <p id="listHelp" class="sr-only">
+            Type a game name and press Add Game.
+          </p>
 
-          <ul id="itemList"></ul>
+          <div style="margin-top: 8px">
+            <button id="addItem" type="button">Add Game</button>
+          </div>
+
+          <ul id="itemList" aria-live="polite" style="margin-top: 12px"></ul>
         </section>
       </div>
     </main>

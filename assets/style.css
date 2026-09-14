@@ -4,12 +4,10 @@
     --pink: #cc6bcc;
     --soft: #e49ae5;
     --light-blue: #f2f8ff;
-    /* pale blue base (default) */
     --light-pink: #fff4f9;
-    /* pale pink alternative */
-
     --light: var(--light-blue);
-    /* switch to --light-pink for pale pink base */
+    --accent-pink-rgba: rgba(204, 107, 204, 0.18);
+    --accent-pink-strong: rgba(204, 107, 204, 0.28);
     --text-dark: #2b0b3a;
 }
 
@@ -20,7 +18,7 @@
     padding: 0;
 }
 
-/* Body — light airy base with soft clouded gradients */
+/* Body */
 body {
     font-family: Arial, Helvetica, sans-serif;
     min-height: 100vh;
@@ -33,7 +31,7 @@ body {
     overflow-x: hidden;
 }
 
-/* Layered cloud effect */
+/* Cloud layers */
 body::before,
 body::after {
     content: "";
@@ -45,13 +43,13 @@ body::after {
 
 body::before {
     background:
-        radial-gradient(40% 30% at 10% 20%, rgba(255, 210, 233, 0.85) 0%, rgba(255, 210, 233, 0) 40%),
-        radial-gradient(50% 40% at 80% 30%, rgba(228, 154, 229, 0.65) 0%, rgba(228, 154, 229, 0) 45%),
-        radial-gradient(60% 50% at 50% 70%, rgba(102, 100, 207, 0.45) 0%, rgba(102, 100, 207, 0) 50%),
-        radial-gradient(40% 35% at 20% 75%, rgba(88, 68, 179, 0.45) 0%, rgba(88, 68, 179, 0) 45%);
+        radial-gradient(45% 35% at 8% 18%, rgba(255, 210, 233, 0.78) 0%, rgba(255, 210, 233, 0) 55%),
+        radial-gradient(55% 45% at 82% 28%, rgba(228, 154, 229, 0.62) 0%, rgba(228, 154, 229, 0) 55%),
+        radial-gradient(70% 60% at 50% 72%, rgba(102, 100, 207, 0.5) 0%, rgba(102, 100, 207, 0) 60%),
+        radial-gradient(48% 40% at 18% 78%, rgba(88, 68, 179, 0.45) 0%, rgba(88, 68, 179, 0) 55%);
     mix-blend-mode: screen;
-    filter: blur(36px) saturate(1.02);
-    opacity: 0.9;
+    filter: blur(44px) saturate(1.03);
+    opacity: 0.92;
 }
 
 body::after {
@@ -117,7 +115,7 @@ nav {
     font-weight: 700;
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.85), rgba(228, 154, 229, 0.04));
     border: 1px solid rgba(102, 100, 207, 0.08);
-    transition: transform 0.14s ease, box-shadow 0.14s ease;
+    transition: transform .14s ease, box-shadow .14s ease;
 }
 
 #site-nav a:hover,
@@ -126,13 +124,13 @@ nav {
     box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08);
 }
 
-/* Main content */
+/* Main */
 main {
     padding: 18px;
     margin: 0 20px 28px;
 }
 
-/* Card container */
+/* Cards */
 .card-container {
     display: flex;
     flex-direction: column;
@@ -140,7 +138,6 @@ main {
     padding: 8px;
 }
 
-/* Sections (cards) */
 section {
     background: linear-gradient(180deg, rgba(255, 255, 255, 0.9), rgba(228, 154, 229, 0.03));
     border-radius: 10px;
@@ -151,13 +148,12 @@ section {
     box-shadow: 0 6px 14px rgba(88, 68, 179, 0.03);
 }
 
-/* Paragraphs */
+/* Text */
 p {
     line-height: 1.6;
     color: var(--text-dark);
 }
 
-/* Intro and notes */
 .intro {
     color: var(--deep);
     font-style: italic;
@@ -172,7 +168,7 @@ p {
 /* Assignment details */
 #assignment-details {
     background: linear-gradient(180deg, rgba(102, 100, 207, 0.03), rgba(88, 68, 179, 0.02));
-    border: 1px dashed rgba(204, 107, 204, 0.12);
+    border: 1px dashed var(--accent-pink-rgba);
     padding: 14px;
     margin: 12px 0;
     color: var(--text-dark);
@@ -209,7 +205,7 @@ button {
     color: white;
     font-weight: 700;
     box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08);
-    transition: transform 0.14s ease, box-shadow 0.14s ease;
+    transition: transform .14s ease, box-shadow .14s ease;
 }
 
 button:hover,
@@ -227,8 +223,8 @@ footer {
     border-top: 1px solid rgba(88, 68, 179, 0.04);
 }
 
-/* Responsive grid for cards */
-@media (min-width: 768px) {
+/* Responsive */
+@media (min-width:768px) {
     .card-container {
         flex-direction: row;
         flex-wrap: wrap;
@@ -239,7 +235,7 @@ footer {
     }
 }
 
-@media (min-width: 1200px) {
+@media (min-width:1200px) {
     .card-container>section {
         flex: 1 1 calc(25% - 20px);
     }
@@ -250,34 +246,12 @@ footer {
     display: none;
 }
 
-/* Palette overrides — pale blue base, softer pink accents, hide interactive nav link */
-:root {
-    --deep: #5844b3;
-    --mid: #6664cf;
-    --pink: #cc6bcc;
-    --soft: #e49ae5;
-    --light-blue: #f2f8ff;
-    /* pale blue base */
-    --light-pink: #fff4f9;
-    /* pale pink alternative */
-
-    --light: var(--light-blue);
-    /* use var(--light-pink) instead for pale pink base */
-    --accent-pink-rgba: rgba(204, 107, 204, 0.18);
-    /* softer pink for borders/accents */
-    --accent-pink-strong: rgba(204, 107, 204, 0.28);
-    /* slightly stronger for buttons if needed */
-    --text-dark: #2b0b3a;
-}
-
-/* Apply the new page base color (override earlier body background if present) */
+/* Soft overrides and accessibility tweaks (end of file) */
 body {
     background-color: var(--light) !important;
 }
 
-/* Soften pink-heavy radial gradients used for clouding (override earlier rules) */
 body::before {
-    /* keep the same radial layout but use softer pink opacities */
     background:
         radial-gradient(40% 30% at 10% 20%, rgba(255, 210, 233, 0.65) 0%, rgba(255, 210, 233, 0) 40%),
         radial-gradient(50% 40% at 80% 30%, rgba(228, 154, 229, 0.45) 0%, rgba(228, 154, 229, 0) 45%),
@@ -288,7 +262,6 @@ body::before {
     opacity: 0.9;
 }
 
-/* Use softer pink for dashed borders and subtle accents */
 #assignment-details,
 nav,
 header,
@@ -296,7 +269,6 @@ section {
     border-color: var(--accent-pink-rgba) !important;
 }
 
-/* Buttons: keep purple -> pink gradient but reduce pink saturation on hover */
 button {
     background: linear-gradient(90deg, var(--mid), rgba(204, 107, 204, 0.9)) !important;
     box-shadow: 0 8px 18px rgba(102, 100, 207, 0.08) !important;
@@ -308,19 +280,20 @@ button:focus {
     box-shadow: 0 12px 26px rgba(102, 100, 207, 0.12) !important;
 }
 
-/* Nav link hide rule — hides only the interactive.html link */
+/* Hide interactive link (CSS-only) */
 #site-nav a[href$="interactive.html"] {
     display: none !important;
-    width: 0;
-    height: 0;
-    padding: 0;
-    margin: 0;
-    border: 0;
-    overflow: hidden;
-    visibility: hidden;
+    visibility: hidden !important;
+    width: 0 !important;
+    height: 0 !important;
+    padding: 0 !important;
+    margin: 0 !important;
+    border: 0 !important;
+    overflow: hidden !important;
 }
 
-/* Optional: if you want the pale pink base instead, uncomment this and comment the --light assignment above */
-/*
-:root { --light: var(--light-pink); }
-*/
+/* Focus ring */
+:focus-visible {
+    outline: 3px solid rgba(102, 100, 207, 0.28);
+    outline-offset: 3px;
+}

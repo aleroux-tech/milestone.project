@@ -1,87 +1,63 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Families That Game Together - Amanda's Portfolio</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>Families That Game Together — Home</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
       <h1>Families That Game Together</h1>
 
       <img
-        src="assets/images/chatgptgaming2.png"
-        alt="A family gaming together"
+        src="assets/images/gamingoverload.png"
+        alt="Colorful gaming illustration representing creativity and development"
         class="hero-image"
         loading="eager"
         decoding="async"
       />
 
       <p class="intro">
-        Hello, I'm Amanda! Welcome to my portfolio website. I'm currently in
-        college learning web development, and when I'm not studying or working
-        on assignments, I'm gaming with my five amazing boys. They range from 8
-        to 16 years old, and gaming together is one of our favorite ways to
-        bond, laugh, and spend time as a family.
+        Welcome — this portfolio shows my journey through web development, with
+        projects that highlight HTML, CSS, accessibility, and JavaScript.
       </p>
     </header>
 
-    <nav id="site-nav">
-      <a href="index.html">Home</a> |
-      <a href="projects.html">Projects/Work</a> |
-      <a href="about.html">About/Contact</a> |
-      <a href="interactive.html">Interactive Gaming Network</a>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="index.html" aria-current="page">Home</a> |
+      <a href="projects.html">Projects</a> | <a href="about.html">About</a> |
+      <a href="interactive.html">Interactive</a>
     </nav>
 
-    <main id="main-content">
-      <div class="card-container">
-        <section class="welcome-section">
-          <h2>Welcome to My Portfolio</h2>
-          <p>
-            This website showcases my journey through web development — from
-            learning HTML, CSS, and JavaScript to creating interactive features
-            inspired by the games my family loves.
-          </p>
-        </section>
+    <main id="main-content" role="main">
+      <section>
+        <h2>About this Portfolio</h2>
+        <p>
+          This site is my capstone draft. It includes multiple pages with
+          semantic HTML, responsive CSS, accessible features, and interactive
+          JavaScript examples.
+        </p>
+      </section>
 
-        <section class="family-gaming">
-          <h2>Why a Gaming Theme?</h2>
-          <p>
-            Gaming has always been a bonding experience for me and my kids.
-            Whether we're building worlds in Minecraft or teaming up in
-            Fortnite, it's something that brings us closer together.
-          </p>
-        </section>
-
-        <section class="featured-project">
-          <h2>Featured Project</h2>
-          <p>
-            Check out my Interactive Gaming Network — a page where you can
-            generate gaming facts, customize a gamer tag, and add your favorite
-            games to a list.
-          </p>
-          <p><a href="interactive.html">Visit the Interactive Page</a></p>
-        </section>
-
-        <section class="favorite-games">
-          <h2>Our Favorite Games</h2>
-          <p>Here are some of the games we love playing together:</p>
-          <ul>
-            <li>Fortnite — our all‑time favorite</li>
-            <li>Minecraft — my youngest son's favorite</li>
-            <li>Call of Duty — my oldest son's favorite</li>
-          </ul>
-        </section>
-      </div>
+      <section>
+        <h2>Highlights</h2>
+        <ul>
+          <li>Two complete pages with real content (Home and Projects)</li>
+          <li>Responsive layout for mobile and desktop</li>
+          <li>Accessible markup and keyboard focus styles</li>
+          <li>
+            Interactive page with DOM updates (facts, color preview, add list)
+          </li>
+        </ul>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Families That Game Together</p>
     </footer>
-
-    <script src="assets/script.js"></script>
   </body>
 </html>

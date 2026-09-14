@@ -1,129 +1,47 @@
 <!doctype html>
 <html lang="en">
   <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>About Me</title>
-
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>About — Families That Game Together</title>
     <link rel="stylesheet" href="assets/style.css" />
   </head>
 
   <body>
+    <a class="skip-link" href="#main-content">Skip to main content</a>
+
     <header>
-      <h1>About Me & Contact</h1>
-
-      <img
-        src="assets/images/gamingcollage.png"
-        alt="Gaming collage representing family gaming moments"
-        class="hero-image"
-        loading="eager"
-        decoding="async"
-      />
-
-      <p class="intro">
-        Hello, I'm Amanda! Welcome to my portfolio website. I'm currently in
-        college learning web development, and when I'm not studying or working
-        on assignments, I'm gaming with my five amazing boys. They range from 8
-        to 16 years old, and gaming together is one of our favorite ways to
-        bond, laugh, and spend time as a family.
-      </p>
+      <h1>About / Contact</h1>
     </header>
 
-    <nav id="site-nav">
-      <a href="index.html">Home</a> |
-      <a href="projects.html">Projects/Work</a> |
-      <a href="about.html">About/Contact</a> |
-      <a href="interactive.html">Interactive Gaming Network</a>
+    <nav id="site-nav" aria-label="Primary navigation">
+      <a href="index.html">Home</a> | <a href="projects.html">Projects</a> |
+      <a href="about.html" aria-current="page">About</a> |
+      <a href="interactive.html">Interactive</a>
     </nav>
 
-    <main>
-      <div class="card-container">
-        <section>
-          <h2>My Web Development Journey</h2>
-          <p>
-            My love for technology and my desire to set a strong example for my
-            kids inspired me to go to college and pursue an IT degree. Web
-            development gives me the chance to do something I truly enjoy while
-            building a better future for the people who matter most — my five
-            sons.
-          </p>
-        </section>
+    <main id="main-content" role="main">
+      <section>
+        <h2>About Me</h2>
+        <p>
+          I am Amanda — a web development student building a capstone portfolio
+          that demonstrates HTML, CSS, accessibility, and JavaScript skills.
+          This site reflects projects completed during the course and is
+          deployed on GitHub Pages.
+        </p>
+      </section>
 
-        <section>
-          <h2>Why I Chose a Gaming Theme</h2>
-          <p>
-            Gaming has always been a big part of our family life. It’s how we
-            bond, laugh, and spend time together. Choosing a gaming theme for my
-            portfolio felt natural because it represents who I am and what
-            inspires me — a mom who loves technology and loves gaming with her
-            boys.
-          </p>
-        </section>
-
-        <!-- Contact Form Toggle Button -->
-        <section>
-          <button id="toggleForm">Show/Hide Contact Form</button>
-
-          <!-- Contact Form -->
-          <form id="contact-form" class="hidden">
-            <fieldset>
-              <legend>Send a Message</legend>
-              <p id="form-instructions">All fields are required.</p>
-
-              <label for="name">Name</label>
-              <input
-                type="text"
-                id="name"
-                name="name"
-                required
-                aria-required="true"
-                aria-describedby="form-error"
-              />
-
-              <label for="email">Email</label>
-              <input
-                type="email"
-                id="email"
-                name="email"
-                required
-                aria-required="true"
-                aria-describedby="form-error"
-              />
-
-              <label for="subject">Subject</label>
-              <input
-                type="text"
-                id="subject"
-                name="subject"
-                required
-                aria-required="true"
-                aria-describedby="form-error"
-              />
-
-              <label for="message">Message</label>
-              <textarea
-                id="message"
-                name="message"
-                required
-                aria-required="true"
-                aria-describedby="form-error"
-              ></textarea>
-
-              <p id="form-error" role="alert" aria-live="polite">
-                Please complete every required field before sending.
-              </p>
-
-              <button type="submit">Send</button>
-            </fieldset>
-          </form>
-        </section>
-      </div>
+      <section>
+        <h2>Contact</h2>
+        <p>
+          For feedback or questions about this portfolio, please contact me via
+          the course platform or include a note in the peer review comments.
+        </p>
+      </section>
     </main>
 
     <footer>
       <p>&copy; 2026 Families That Game Together</p>
     </footer>
-
-    <script src="assets/script.js"></script>
   </body>
 </html>
