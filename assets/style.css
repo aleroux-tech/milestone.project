@@ -217,6 +217,45 @@ button:hover {
     }
 }
 
+@media (max-width: 480px) {
+
+    nav {
+        margin: 0 10px 10px;
+        padding: 10px;
+    }
+
+    nav a {
+        display: block;
+        margin: 8px 0;
+        margin-right: 0;
+        text-align: center;
+    }
+
+    main,
+    section,
+    footer {
+        margin: 0 10px 10px;
+        padding: 12px;
+    }
+
+    main {
+        padding: 10px;
+        /* reduce padding for mobile */
+    }
+
+    .hero-image {
+        max-width: 100%;
+    }
+
+    .card-container {
+        flex-direction: column;
+    }
+
+    .card-container>section {
+        flex: 1 1 100%;
+    }
+}
+
 /* Hidden Class for JS Toggle */
 .hidden {
     display: none;
