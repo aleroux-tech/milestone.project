@@ -24,4 +24,4 @@
 
 ## Live Site
 
-https://aleroux-tech.github.io/milestone3-visual.design/
+<https://aleroux-tech.github.io/milestone3-visual.design/>

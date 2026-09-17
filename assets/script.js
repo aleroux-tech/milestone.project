@@ -1,79 +1,25 @@
-// =========================
-// FORM VALIDATION (about.html only)
-// =========================
+// 1. Fun Fact Button
+const factButton = document.getElementById("factButton");
+const funFact = document.getElementById("funFact");
 
-const form = document.querySelector("#contact-form");
-const errorMessage = document.querySelector("#form-error");
+if (factButton && funFact) {
+  const funFacts = [
+    "I'm a mom of five boys.",
+    "I've always been good with technology.",
+    "I love learning new things.",
+    "Web design is something I honestly enjoy.",
+    "People always come to me when they need tech help.",
+  ];
 
-if (form) {
-  form.addEventListener("submit", (event) => {
-    const name = document.querySelector("#name").value.trim();
-    const email = document.querySelector("#email").value.trim();
-    const subject = document.querySelector("#subject").value.trim();
-    const message = document.querySelector("#message").value.trim();
-
-    if (!name || !email || !subject || !message) {
-      event.preventDefault();
-      errorMessage.textContent =
-        "Please complete every required field before sending.";
-      errorMessage.style.display = "block";
-    }
-  });
-
-  // Clear errors when typing
-  document
-    .querySelectorAll("#name, #email, #subject, #message")
-    .forEach((input) => {
-      input.addEventListener("input", () => {
-        errorMessage.style.display = "none";
-      });
-    });
-}
-
-// =========================
-// SHOW/HIDE CONTACT FORM (about.html)
-// =========================
-
-const toggleForm = document.querySelector("#toggleForm");
-const contactForm = document.querySelector("#contact-form");
-
-if (toggleForm && contactForm) {
-  toggleForm.addEventListener("click", () => {
-    contactForm.classList.toggle("hidden");
-  });
-}
-
-// =========================
-// SHOW/HIDE SECTIONS (index.html)
-// =========================
-
-const toggleCards = document.querySelector("#toggleCards");
-const cardContainer = document.querySelector(".card-container");
-
-if (toggleCards && cardContainer) {
-  toggleCards.addEventListener("click", () => {
-    cardContainer.classList.toggle("hidden");
-  });
-}
-
-// =========================
-// Homework 7 Interactions
-// =========================
-
-// 1. button content
-const factButton = document.querySelector("#factButton");
-const beachFact = document.querySelector("#beachFact");
-
-if (factButton && beachFact) {
   factButton.addEventListener("click", () => {
-    beachFact.textContent =
-      "Fun fact: Beaches can be made of coral, lava, shells, or even glass!";
+    const randomFact = funFacts[Math.floor(Math.random() * funFacts.length)];
+    funFact.textContent = randomFact;
   });
 }
 
-// 2. Style changes on input
-const colorInput = document.querySelector("#colorInput");
-const colorPreview = document.querySelector("#colorPreview");
+// 2. Color Input
+const colorInput = document.getElementById("colorInput");
+const colorPreview = document.getElementById("colorPreview");
 
 if (colorInput && colorPreview) {
   colorInput.addEventListener("input", () => {
@@ -81,20 +27,20 @@ if (colorInput && colorPreview) {
   });
 }
 
-// 3. Dynamic list
-const listInput = document.querySelector("#listInput");
-const addItem = document.querySelector("#addItem");
-const itemList = document.querySelector("#itemList");
+// 3. Dynamic List (Fun Facts About the User)
+const listInput = document.getElementById("listInput");
+const addItem = document.getElementById("addItem");
+const itemList = document.getElementById("itemList");
 
 if (listInput && addItem && itemList) {
   addItem.addEventListener("click", () => {
-    const newItemText = listInput.value.trim();
-    if (newItemText === "") return;
+    const newItem = listInput.value.trim();
 
-    const li = document.createElement("li");
-    li.textContent = newItemText;
-
-    itemList.appendChild(li);
-    listInput.value = "";
+    if (newItem !== "") {
+      const li = document.createElement("li");
+      li.textContent = newItem;
+      itemList.appendChild(li);
+      listInput.value = "";
+    }
   });
 }
