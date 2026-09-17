@@ -1,17 +1,15 @@
-/* Global Reset */
-* {
-    box-sizing: border-box;
+body {
+    font-family: 'Open Sans', Arial, sans-serif;
 }
 
-/* Body */
-body {
-    margin: 0;
-    padding: 0;
-    background-color: #EEF9FA;
-    /* pale blue */
-    color: #23374d;
-    /* dark navy text */
-    font-family: Arial, sans-serif;
+h1,
+h2,
+h3 {
+    font-family: 'Poppins', 'Open Sans', Arial, sans-serif;
+}
+
+* {
+    box-sizing: border-box;
 }
 
 /* Header */
